@@ -13,9 +13,13 @@ The service has been "angularized" and some deprecated syntax for recursive stat
 Syntax updated, with some excteptions, to be jsLint compliant in strict mode.
 
 Promise added for clalback on swf load completion. 
- - Private member: flashLoaded 
- - public exposed as a service property: loadedPromise
+<ul>
+<li>Private member: flashLoaded</li>
+<li>public exposed as a service property: loadedPromise</li>
+</ul>
  Function added that overrides the "one and done" natture of loading the swf plugin
- - overrideDetection
-    -- resets a controlling bool and recalls testPlayerVersion
+ <ul>
+ <li>overrideDetection</li>
+ <li>- resets a controlling bool and recalls testPlayerVersion</li>
+ </ul>
     
