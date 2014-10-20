@@ -1,6 +1,9 @@
 = angular-swfbject
 
-refer to SWFObject http://github.com/swfobject/swfobject for core library information, this read-me only covers the "new" stuff.
+Refer to SWFObject http://github.com/swfobject/swfobject for core library information, this read-me only covers the "new" stuff.
+
+All of the pre-existing samples provided on the source repo have been removed on this project. 
+I don't use them for myt own purposes. If someone wishes to add them back and pair them with appropriate documentation, be my guest.
 
 = Service:swfobject
 
