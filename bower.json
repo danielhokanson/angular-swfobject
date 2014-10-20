@@ -1,7 +1,7 @@
 {
   "name": "hokey.angular-swfobject",
   "version": "1.0.0",
-  "main": "./src/angular-swfobject.js"
+  "main": "./src/angular-swfobject.js",
   "repository": {
 	"type": "git",
 	"url": "http://github.com/danielhokanson/angular-swfobject.git"
