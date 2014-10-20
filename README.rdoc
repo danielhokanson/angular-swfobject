@@ -1,8 +1,8 @@
-= angular-swfbject
+# angular-swfbject
 
 refer to SWFObject http://github.com/swfobject/swfobject for core library information, this read-me only covers the "new" stuff.
 
-= swfobject
+# service:swfobject
 
 Allows swfobject to live in the realm of angular scope instead of being a window level object.
 
@@ -10,16 +10,12 @@ The core service that contains the same core logic as swfObject classic.
 The service has been "angularized" and some deprecated syntax for recursive statements have been removed
 (callee replaced with named functions). 
 
-Syntax updated, with some excteptions, to be jsLint compliant in strict mode.
+## Syntax updated, with some excteptions, to be jsLint compliant in strict mode.
 
-Promise added for clalback on swf load completion. 
-<ul>
-<li>Private member: flashLoaded</li>
-<li>public exposed as a service property: loadedPromise</li>
-</ul>
- Function added that overrides the "one and done" natture of loading the swf plugin
- <ul>
- <li>overrideDetection</li>
- <li>- resets a controlling bool and recalls testPlayerVersion</li>
- </ul>
+### 1. Promise added for clalback on swf load completion. 
+  * Private member: flashLoaded
+  * public exposed as a service property: loadedPromise
+### 2. Function added that overrides the "one and done" nature of loading the swf plugin 
+  * Public function: overrideDetection
+  * Resets a controlling bool and recalls testPlayerVersion
     
