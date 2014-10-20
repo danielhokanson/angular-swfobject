@@ -1,4 +1,4 @@
-= angular-swfbject
+= angular-swfobject
 
 Refer to SWFObject http://github.com/swfobject/swfobject for core library information, this read-me only covers the "new" stuff.
 
@@ -10,6 +10,33 @@ I don't use them for myt own purposes. If someone wishes to add them back and pa
 The core service that contains the same core logic as swfObject classic. 
 The service has been "angularized". Angular is the only pre-requiste of this module.
 
+== Usage
+  angular.module('sampleApp',['angular-swfobject'])
+    .service('consumingSvc', ['swfobject',function(swfobject){
+       var swfVersion = swfobject.getFlashPlayerVersion();
+       
+       //Here's usage of the loading promise
+       swfObject.loadedPromise.then(function loadedSuccessfully(){
+         console.log('eureka!');
+       });
+       
+       //Do something logical with version
+       function swfLoadSuccessCb = function swfLoadSuccessCb(e){
+         //do something here on successful callback
+       }
+       return {
+          embed: function embed(swfUrlStr, replaceElemIdStr, 
+                                widthStr, heightStr, swfVersionStr, 
+                                xiSwfUrlStr, flashvarObj, parObj, 
+                                attObj, callbackFn){
+            swfobject.embedSWF(swfUrlStr, replaceElemIdStr, 
+                                widthStr, heightStr, swfVersionStr, 
+                                xiSwfUrlStr, flashvarObj, parObj, 
+                                attObj, swfLoadSuccessCb);
+          }
+       };
+    });
+
 === 1. Syntax updated, with some excteptions, to be jsLint compliant in strict mode.
   * Use of deprecated callee replaced with named functions
 === 2. Promise added for clalback on swf load completion. 
@@ -18,4 +45,3 @@ The service has been "angularized". Angular is the only pre-requiste of this mod
 === 3. Function added that overrides the "one and done" nature of loading the swf plugin 
   * Public function: overrideDetection
   * Resets a controlling bool and recalls testPlayerVersion
-    
