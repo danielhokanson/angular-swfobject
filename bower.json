@@ -1,5 +1,5 @@
 {
-  "name": "angular-swfobject",
+  "name": "hokey.angular-swfobject",
   "version": "1.0.0",
   "main": "./src/angular-swfobject.js"
   "repository": {
