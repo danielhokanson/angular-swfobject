@@ -1,5 +1,16 @@
+/*!    
+     **********************Forked from********************************
+     SWFObject v2.3.20130521 <http://github.com/swfobject/swfobject>
+     *****************************************************************
+
+angular-SWFObject v1.0.0 <http://github.com/danielhokanson/swfobject>
+    is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+*/
+
+/* global ActiveXObject: false */
+
 'use strict';
-angular.module('angular-swfobject')
+angular.module('angular-swfobject',[])
     .service('swfobject', function ($window, $timeout, $q) {
 
     var flashLoaded = $q.defer(),
@@ -625,6 +636,7 @@ onDomLoad = (function onDomLoad() {
     return {
         /* Public API
             - Reference: http://code.google.com/p/swfobject/wiki/documentation
+            - Angular Stuff: http://www.github.com/danielhokanson/swfobject
         */
         loadedPromise: flashLoaded.promise,
         registerObject: function (objectIdStr, swfVersionStr, xiSwfUrlStr, callbackFn) {
