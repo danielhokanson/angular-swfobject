@@ -13,14 +13,12 @@ The service has been "angularized". Angular is the only pre-requiste of this mod
 == Usage
   angular.module('sampleApp',['angular-swfobject'])
     .service('consumingSvc', ['swfobject',function(swfobject){
-       var swfVersion = swfobject.getFlashPlayerVersion();
        
        //Here's usage of the loading promise
        swfObject.loadedPromise.then(function loadedSuccessfully(){
          console.log('eureka!');
        });
        
-       //Do something logical with version
        function swfLoadSuccessCb = function swfLoadSuccessCb(e){
          //do something here on successful callback
        }
