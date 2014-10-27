@@ -384,7 +384,7 @@ onDomLoad = (function onDomLoad() {
                     obj.parentNode.removeChild(obj);
                 }
                 else {
-                    $timeout(displayAltContent(obj), 10);// jshint ignore:line
+                    $timeout(function(){displayAltContent(obj);}, 10);// jshint ignore:line
                 }
             })();
         }
@@ -495,7 +495,7 @@ onDomLoad = (function onDomLoad() {
                         removeObjectInIE(id);
                     }
                     else {
-                        $timeout(removeSWF(id), 10);// jshint ignore:line
+                        $timeout(function(){removeSWF(id);}, 10);// jshint ignore:line
                     }
                 })();
             }
