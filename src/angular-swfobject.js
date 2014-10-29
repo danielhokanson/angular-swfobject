@@ -209,7 +209,7 @@ onDomLoad = (function onDomLoad() {
         var t = b.appendChild(o);
         if (t) {
             var counter = 0;
-            (function () {
+            (function reloadFlash() {
                 if (typeof t.GetVariable !== UNDEF) {
                     var d = t.GetVariable('$version');
                     if (d) {
@@ -220,7 +220,7 @@ onDomLoad = (function onDomLoad() {
                 }
                 else if (counter < 10) {
                     counter++;
-                    $timeout(testPlayerVersion, 10);// jshint ignore:line
+                    $timeout(reloadFlash, 10);// jshint ignore:line
                     return;
                 }
                 b.removeChild(o);
