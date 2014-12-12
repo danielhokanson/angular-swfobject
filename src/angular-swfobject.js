@@ -89,6 +89,7 @@ ua = (function () {
                     ie = true; // cascaded feature detection for Internet Explorer
                     d = d.split(' ')[1].split(',');
                     playerVersion = [parseInt(d[0], 10), parseInt(d[1], 10), parseInt(d[2], 10)];
+                    flashLoaded.resolve();
                 }
             }
         }
